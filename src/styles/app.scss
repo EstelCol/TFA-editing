@@ -126,7 +126,9 @@ html{
     .title__3--box{
       margin: 0 5% 0 5%;
     }
-
+    .title__3--margin{
+      margin: 0 5% 0 5%;
+    }
     //Paragraphe
     .para{
       padding: 27px 0 0 0;
@@ -167,7 +169,7 @@ html{
       margin-top: 91px;
     }
     .meet__el{
-      width: 400px;
+      width: 330px;
     }
     .centerbutton{
       padding-bottom: 41px;
@@ -194,6 +196,27 @@ html{
     .hypo__titlepara{
       margin: 0 5% 0 5%;
     }
+    .hypo{
+      margin: 41px 0 0 0;
+      gap: 41px;
+    }
+    .img__hypo{
+      margin: 41px 0 91px 0;
+    }
+    .img__hypo--cc{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .img__hypo--cc .img__cc{
+      max-width: 90%;
+      max-height: 60%;
+    }
+    //But Projet
+    .loop-videoedit{
+      width: 100%;
+      margin: 41px 0 91px 0;
+    }
 
 }
 
@@ -212,20 +235,19 @@ html{
       height: 800px;
     }
     .menu--sticky{
-      position: sticky;
+      position: fixed;
+      flex-direction: row;
+      width: 100%;
       top: 0%;
       z-index: 10;
     }
-    .menu__list{
-      display: flex;
-      list-style: none;
-      }
     .nav__menu {
-      padding: 20px 0 20px 0;
+      padding: 15px 0 15px 45px;
       overflow-x: scroll;
       scrollbar-color: transparent transparent;
     }  
     .menu__list {
+      display: flex;
       gap: 18px;
       list-style: none;
       margin: 0;
@@ -239,17 +261,50 @@ html{
       text-decoration: none;
       color: var(--color-black);
     } 
+    .lineheader{
+      height: 1px;
+      background-color: var(--color-aftereffects);
+    }
     .burger__menu{
       display: none;
     }
-
+    //Active Menu
+    .menu--sticky .menu__el {
+      position: relative;
+    }
+    .menu--sticky .menu__el::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-color: var(--color-lavender);
+      border-radius: 10px 10px 0 0;
+      opacity: 0; 
+      transition: opacity 0.3s ease; 
+    }
+    .menu--sticky .menu__el:hover::after {
+      opacity: 1; 
+    }
+    .menu--sticky .menu__el--active::before{
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background-color: var(--color-lavender);
+      border-radius: 10px 10px 0 0;
+    }
+    
     //Grille Image + Titre
     .grid__header{
       position: relative;
       display: grid;
       grid-template-columns: 1fr 0.5fr;
       grid-template-rows: repeat(1, 1fr);
-      padding: 91px 0 91px 0;
+      padding: 160px 0 91px 0;
     }
     .div__gif--grid{
       grid-column: 2;
@@ -263,7 +318,7 @@ html{
     //Images
     .div__gif{
       position: absolute;
-      bottom: -185px;
+      bottom: -180px;
       right: 0%;
       }
     .img--gif{
@@ -294,7 +349,9 @@ html{
     .title__3--box{
       margin: 0 7% 0 7%;
     }
-
+    .title__3--margin{
+      margin: 0 7% 0 7%;
+    }
 
     //Paragraphe
     .para{
@@ -307,7 +364,7 @@ html{
 
     //Box
     .box{
-        margin: 91px 0 0 0;
+        margin-top: 91px;
        
     }
     .parentbox__grid{
@@ -335,11 +392,10 @@ html{
     }
 
     //Section
-    .section--problematique{
+    .section--background{
       background-image: url(../assets/images/Background-section.svg);
       background-size: 45%;
     }
-
     //Scroll Tiktok
     .editor__scroll{
       margin: 61px 0 0 0;
@@ -403,8 +459,57 @@ html{
 
     //Hypothèse
     .hypo__titlepara{
-      margin: 0 5% 0;
+      margin: 0 7% 0 7%;
     }
+    .hypo{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 50px;
+      row-gap: 90px;
+      margin: 91px 0 91px 0;
+    }
+   .img__hypo--ae{
+      grid-column: 1;
+      grid-row: 1;
+      align-self: center;
+      top: 25%;
+    }
+    .img__hypo--cc{
+      width: 246px;
+      height: 293px;
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: center; 
+      align-self: center;
+    }
+    .img__ae .img__cc{
+      position: absolute;
+    }
+
+    //BUT PROJETS
+    .butprojet{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+    }
+    .butgrid__1{
+      grid-column: 2 ;
+      grid-row:1 ;
+      margin-left: 7%;
+      margin-right: 7%;
+      margin-bottom: 91px;
+    }
+    .butgrid__2{
+      grid-column:1 ;
+      grid-row:1 ;
+      align-self: center;
+    }
+    .loop-videoedit{
+      width: 100%;
+    }
+
+    //PRESENTATION TFA
 
 }
 
@@ -470,7 +575,7 @@ html{
 
     //Box
     .box{
-      margin: 101px 0 0 0;
+      margin-top: 101px;
     }
     .parentbox__grid{
       padding-bottom: 303px;
@@ -521,22 +626,20 @@ html{
     .centergraph{
       padding-top: 68px;
     }
-
     //Hypothèse
     .hypo{
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      gap: 50px;
-      margin: 101px 0 0 0;
+      margin: 101px 0 101px 0;
     }
     .img__hypo--ae{
       width: 550px;
       height: 400px;
       grid-column: 1;
       grid-row: 1;
-      justify-self: center; 
-      align-self: center;
+      align-self: end;
+      top: 0%;
     }
     .img__hypo--cc{
       width: 246px;
@@ -554,6 +657,9 @@ html{
       grid-column: 1;
       grid-row: 2;
     }
+    .butgrid__1{
+      margin-bottom: 101px;
+    }
   
 
 }
@@ -561,6 +667,9 @@ html{
 //HEADER
 .header{
     background-color: var(--color-lavender);
+    background-image: url(../assets/images/backgroundheader@2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .nav__menu{
     background-color: var(--color-white);
@@ -577,7 +686,7 @@ html{
   display: block;
 }
 .title__1{
-  color: var(--color-aftereffects);
+  color: var(--color-white);
 }
 .title__2--white{
   color: var(--color-white);
@@ -585,9 +694,6 @@ html{
 }
 .title__3--purple{
   color: var(--color-lavender);
-}
-.title__3--white{
-  color: var(--color-white);
 }
 .title__3--box{
   text-align: center;
@@ -716,13 +822,12 @@ html{
   position: relative;
 }
 .img__ae{
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .img__cc{
-  position: absolute;
   bottom: 0;
   width: 100%;
   height: auto;
