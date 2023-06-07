@@ -218,6 +218,19 @@ html{
       margin: 41px 0 91px 0;
     }
 
+    //PRESENTATION TFA
+    .div__presentation{
+      margin: 0 5% 0 5%;
+    }
+    .div__girls{
+      margin: 41px 5% 91px 5%;
+
+      .img__girls{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
 }
 
 //Tablette
@@ -364,8 +377,7 @@ html{
 
     //Box
     .box{
-        margin-top: 91px;
-       
+        margin-top: 91px; 
     }
     .parentbox__grid{
       margin: 0 5% 0 5%;
@@ -396,6 +408,7 @@ html{
       background-image: url(../assets/images/Background-section.svg);
       background-size: 45%;
     }
+    
     //Scroll Tiktok
     .editor__scroll{
       margin: 61px 0 0 0;
@@ -490,27 +503,63 @@ html{
     //BUT PROJETS
     .butprojet{
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(1, 1fr);
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(3, 0.5fr);
+      margin: 0 5% 0 5%;
     }
-    .butgrid__1{
-      grid-column: 2 ;
-      grid-row:1 ;
-      margin-left: 7%;
-      margin-right: 7%;
+    .butgrid1{
+      grid-column: 3/8;
+      grid-row: 1;
+      height: min-content;
+    }
+    .butgrid2{
+      grid-column: 3/8;
+      grid-row: 3;
+      height: min-content;
       margin-bottom: 91px;
     }
-    .butgrid__2{
-      grid-column:1 ;
-      grid-row:1 ;
-      align-self: center;
+    .butgrid3{
+      grid-column: 1/6;
+      grid-row: 2;
+      height: min-content;
+      margin-top: 91px;
     }
     .loop-videoedit{
       width: 100%;
     }
 
     //PRESENTATION TFA
+    .presentationgrid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      margin: 91px 0;
+      gap: 50px;
+    }
+    .div__presentation{
+      margin: 0 7%;
+    }
+    .div__girls{
+      display: grid;
+      justify-items: end;
+      align-items: end;
+    }
+    .img__girls{
+      width: 100%;
+      height: min-content;
+    }
 
+    //CONCLUSION
+    .conclusiongrid{
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      margin: 0 0 0 0;
+    }
+    .box__ccl{
+      grid-column: 2/7;
+      margin-bottom: 91px;
+    }
 }
 
 //Desktop
@@ -657,11 +706,58 @@ html{
       grid-column: 1;
       grid-row: 2;
     }
-    .butgrid__1{
+
+    //But projets
+    .butprojet{
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(3, 0.5fr);
+      margin: 0 5% 0 5%;
+    }
+    .butgrid1{
+      grid-column: 5/10;
+      grid-row: 1;
+      height: min-content;
+    }
+    .butgrid2{
+      grid-column: 5/10;
+      grid-row: 3;
+      height: min-content;
       margin-bottom: 101px;
+    }
+    .butgrid3{
+      grid-column: 1/6;
+      grid-row: 2;
+      height: min-content;
+      margin-top: 101px;
     }
   
 
+    //PRESENTATION TFA
+    .presentationgrid{
+      margin: 101px 0;
+    }
+    .div__girls{
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    .img__girls{
+      width: 429px;
+      height: 644px;
+    }
+
+    //CONCLUSION
+    .conclusiongrid{
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      margin: 0 0 0 0;
+    }
+    .box__ccl{
+      grid-column: 3/8;
+      margin-bottom: 101px;
+    }
 }
 
 //HEADER
@@ -833,9 +929,61 @@ html{
   height: auto;
 }
 
+//CONCLUSION
+.conclusiongrid{
+  display: grid;
+}
+
+//CREDITS FOOTER
+.dwt{
+  width: 7%;
+  margin: 0 0 0 10px;
+  position: relative;
+  bottom: -3px;
+}
+.dwt:hover{
+  fill: var(--color-crimsonblaze);
+}
+.grid__footer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin: 91px 2% 21px 2%;
+}
+.credits{
+  align-self: end;
+}
+.lien--footer{
+  color: var(--color-black);
+  text-decoration: none;
+}
+.lien--footer:hover{
+  text-decoration: underline;
+}
+.menu__listgrid{
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  justify-self: end;
+}
+.menu__elfooter a{
+  text-decoration: none;
+  color: var(--color-black);
+}
+.menu__elfooter:hover{
+  text-decoration: underline;
+}
+
+
 @media (min-width: 1500px){
   .para--boxwidth{
     width: 55ch;
+  }
+  .meet__scroll{
+    overflow-x:auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
   }
 }
 
