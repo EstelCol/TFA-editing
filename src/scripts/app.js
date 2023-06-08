@@ -1,4 +1,10 @@
 'use strict';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 // BurgerMenu Design
 const burgerMenu = document.querySelector('.burger__menu');
@@ -72,6 +78,7 @@ if (TriggerButton && document.querySelectorAll('.section').length > 0) {
 
 
 
+
 // PARALLAX HEADER
 var layers = document.querySelectorAll('.div__parallax');
 
@@ -86,6 +93,7 @@ function parallax() {
   }
 }
 window.addEventListener('scroll', parallax);
+
 
 
 
@@ -139,3 +147,64 @@ bars.forEach(bar => {
     barDescription.textContent = '';
   });
 });
+
+
+
+//Slide Image graphique
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.slider');
+  const prevBtn = document.querySelector('.slider__prev');
+  const nextBtn = document.querySelector('.slider__next');
+  const items = document.querySelectorAll('.slider__item');
+  let currentIndex = 0;
+
+  if (prevBtn && nextBtn) {
+    nextBtn.addEventListener('click', function() {
+      currentIndex++;
+      if (currentIndex >= items.length) {
+        currentIndex = 0;
+      }
+      updateSlider();
+    });
+
+    prevBtn.addEventListener('click', function() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = items.length - 1;
+      }
+      updateSlider();
+    });
+  }
+
+  function updateSlider() {
+    for (let i = 0; i < items.length; i++) {
+      if (i === currentIndex) {
+        items[i].style.display = 'block';
+      } else {
+        items[i].style.display = 'none';
+      }
+    }
+  }
+});
+
+
+
+
+
+//ANIMATIONS GSAP
+const Animelements = document.querySelectorAll('.img__hypo--ae, .img__hypo--cc, .img__girls');
+
+Animelements.forEach((element) => {
+  gsap.from(element, {
+    opacity: 0,
+    y: 100,
+    duration: 5,
+    scrollTrigger: {
+      trigger: element,
+      start: 'top 100%',
+      end: 'bottom 100%',
+      scrub: true
+    }
+  });
+});
+
