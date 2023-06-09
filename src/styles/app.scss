@@ -171,6 +171,13 @@ html{
       padding-bottom: 41px;
     }
 
+    //SECTION
+    .section--backgroundbig,
+    .section--backgroundbig2{
+      background-image: url(../assets/images/Background-section.svg);
+      background-size: 30%;
+    }
+
     //Box
     .box{
       margin: 41px 5% 0 5%;
@@ -311,6 +318,11 @@ html{
     .menu__elcolor{
       width: 50px;
       height: 50px;
+    }
+
+    //VIDEO PAGE
+    .div__viddocu{
+      margin: 91px 0 91px 0;
     }
 
 }
@@ -455,6 +467,16 @@ html{
     .para--box{
       margin: 0 7% 0 7%;
       padding-bottom: 61px;
+    }
+
+    //Sections
+    .section--backgroundbig{
+      background-image: url(../assets/images/backgroundformtab.svg);
+      background-size: contain;
+    }
+    .section--backgroundbig2{
+      background-image: url(../assets/images/backgroundformtab2.svg);
+      background-size: contain;
     }
 
     //Box
@@ -680,6 +702,11 @@ html{
       width: 100px;
       height: 100px;
     }
+
+    //VIDEO PAGE
+    .div__viddocu{
+      margin: 101px 0 101px 0;
+    }
 }
 
 //Desktop
@@ -740,6 +767,16 @@ html{
     }
     .para--box{
       padding-bottom: 68px;
+    }
+
+    //Sections
+    .section--backgroundbig{
+      background-image: url(../assets/images/backgroundform.svg);
+      background-size: contain;
+    }
+    .section--backgroundbig2{
+      background-image: url(../assets/images/backgroundform2.svg);
+      background-size: contain;
     }
 
     //Box
@@ -906,7 +943,7 @@ html{
 //HEADER
 .header{
     background-color: var(--color-lavender);
-    background-image: url(../assets/images/backgroundheader@2x.jpg);
+    // background-image: url(../assets/images/backgroundheader@2x.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -925,7 +962,7 @@ html{
   display: block;
 }
 .title__1{
-  color: var(--color-white);
+  color: var(--color-aftereffects);
 }
 .title__2--white{
   color: var(--color-white);
@@ -941,6 +978,23 @@ html{
 //Paragraphe
 .para--white{
   color: var(--color-white);
+}
+
+//LIENS
+.lien--parawhite{
+  color: var(--color-white);
+  background-color: var(--color-crimsonblaze);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.lien--parablack{
+  color: var(--color-midnightindigo);
+  background-color: var(--color-lavender);
+  text-decoration: none;
+  border-radius: 5px;
+}
+.lien--parawhite:hover, .lien--parablack:hover{
+  text-decoration: underline;
 }
 
 //Section
@@ -1173,6 +1227,7 @@ html{
 .title__1credits{
   position: relative;
   top: 150px;
+  color: var(--color-white);
 }
 .menu__elcredits{
   display: flex;
@@ -1219,6 +1274,9 @@ html{
 .menu__elcolor{
   list-style: none;
 }
+.menu__elcolor--mauveclaire{
+  background-color: var(--color-lavender);
+}
 .menu__elcolor--mauveae{
   background-color: var(--color-aftereffects);
 }
@@ -1255,6 +1313,18 @@ html{
 .para__fonts--regu{
   font-weight: 400;
 }
+
+//VIDEO PAGE
+.div__viddocu{
+  display: flex;
+  justify-content: center;
+}
+.viddocu{
+  width: 80%;
+  border-radius: 42px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 30px;
+}
+
 
 
 
